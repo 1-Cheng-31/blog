@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cheng.blog.mapper.MsArticleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cheng.blog.pojo.MsArticle">
+        <id column="id" property="id" />
+        <result column="comment_counts" property="commentCounts" />
+        <result column="create_date" property="createDate" />
+        <result column="summary" property="summary" />
+        <result column="title" property="title" />
+        <result column="view_counts" property="viewCounts" />
+        <result column="weight" property="weight" />
+        <result column="author_id" property="authorId" />
+        <result column="body_id" property="bodyId" />
+        <result column="category_id" property="categoryId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, comment_counts, create_date, summary, title, view_counts, weight, author_id, body_id, category_id
+    </sql>
+
+</mapper>

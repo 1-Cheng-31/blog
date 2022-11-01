@@ -1,0 +1,40 @@
+server:
+  port: 8888
+
+# mysql
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog?useSSL=false&useUnicode=true&characterEncoding=UTF8
+    username: root
+    password: admin
+    driver-class-name: com.mysql.jdbc.Driver
+
+  #redis
+  redis:
+    host: 192.168.195.128
+    port: 6379
+    password: admin
+
+
+
+  servlet:
+    multipart:
+      max-request-size: 20MB
+      max-file-size: 2MB
+
+
+
+# mybatis-plus
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   # 日志输出
+
+  global-config:
+    db-config:
+      table-prefix: ms_    # 表前缀
+
+
+qiniu:
+  accessKey: z-jtV0zpdhY9TugTps50gepF_RI7u_86iWiIcdbZ
+  accessSecretKey: tW0zkRYDOUeF14eSZRVVdqN7cK1SC-KxaDQHL9Nl
+
